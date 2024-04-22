@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSH Connection Demo</title>
+</head>
+<body>
+    <h1>SSH Connection Demo</h1>
+    <form method="post">
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username"><br><br>
+        
+        <label for="hostname">Hostname:</label><br>
+        <input type="text" id="hostname" name="hostname"><br><br>
+        
+        <label for="key_filename">Key Filename:</label><br>
+        <input type="text" id="key_filename" name="key_filename" value="demo_key"><br><br>
+        
+        <input type="submit" value="Connect">
+    </form>
+    {% if connection_status %}
+    <p>{{ connection_status }}</p>
+    {% endif %}
+</body>
+</html>
